@@ -672,17 +672,16 @@ class Main extends React.Component {
 
                 <div className="App">
                 <form onSubmit={this.handleSubmit}>
-                <Box
-                  sx={{
-                      display: 'inline-block',
+                 <Box sx={{
+                      display: 'flex',
                       width: '100%',
                       position: 'relative',
                       alignItems: 'center',
                       justifyContent: 'center',
-      
+                      mt: 3
                   }}
                 >
-                    <Container maxWidth='lg'>
+
                         <br/>
                         <br/>
                   <TextField fullWidth label="Enter an address" id="fullWidth" 
@@ -707,14 +706,15 @@ class Main extends React.Component {
                       }}>
                       <ArrowRightIcon />
                   </LoadingButton>
-                  </Container>
-      
                 </Box>
                 </form>
 
+
                 <Card sx={{
-                    padding: 3,
-                    margin: 3
+                    pt: 3,
+                    pb: 3,
+                    mt: 3,
+                    mb: 3,
                 }}>
                     <img src={avatar} alt="avatar" height='70' />
                     <br/>
@@ -729,8 +729,10 @@ class Main extends React.Component {
                 </Card>
 
                 <Card sx={{
-                    padding: 3,
-                    margin: 3
+                    pt: 3,
+                    pb: 3,
+                    mt: 3,
+                    mb: 3,
                 }}>
                     <Typography color="primary" variant="h5" sx={{
                         fontWeight: 'bold'
@@ -750,8 +752,10 @@ class Main extends React.Component {
                 </Card>
 
                 <Card sx={{
-                    padding: 3,
-                    margin: 3
+                    pt: 3,
+                    pb: 3,
+                    mt: 3,
+                    mb: 3,
                 }}>
                     <Typography color="primary" variant="h5" sx={{
                         fontWeight: 'bold'
@@ -770,8 +774,10 @@ class Main extends React.Component {
 
 
                 <Card sx={{
-                    padding: 3,
-                    margin: 3
+                    pt: 3,
+                    pb: 3,
+                    mt: 3,
+                    mb: 3,
                 }}>
                     <Typography color="primary" variant="h5" sx={{
                         fontWeight: 'bold'
@@ -791,8 +797,10 @@ class Main extends React.Component {
 
 
                 <Card sx={{
-                    padding: 3,
-                    margin: 3
+                    pt: 3,
+                    pb: 3,
+                    mt: 3,
+                    mb: 3,
                 }}>
                     <Typography color="primary" variant="h5" sx={{
                         fontWeight: 'bold'
@@ -811,8 +819,10 @@ class Main extends React.Component {
 
 
                 <Card sx={{
-                    padding: 3,
-                    margin: 3
+                    pt: 3,
+                    pb: 3,
+                    mt: 3,
+                    mb: 3,
                 }}>
                     <Typography color="primary" variant="h5" sx={{
                         fontWeight: 'bold'
@@ -828,6 +838,8 @@ class Main extends React.Component {
                     }
                 </Card>
                 <br/>
+
+
             </div>
             )
         }
@@ -846,7 +858,8 @@ class Main extends React.Component {
 
             }}
           >
-              <Container maxWidth='lg'>
+
+
             <TextField fullWidth label="Enter an address" id="fullWidth" 
             value={this.state.value}
             onChange={this.handleChange}
@@ -869,7 +882,7 @@ class Main extends React.Component {
                 }}>
                 <ArrowRightIcon />
             </LoadingButton>
-            </Container>
+
           </Box>
           </form>
 
