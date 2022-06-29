@@ -14,13 +14,43 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import {useEthers} from "@usedapp/core";
+import UAuth from '@uauth/js';
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+
+const uauth = new UAuth(
+  {
+    clientID: 'e2f8fed8-2ca7-46ff-831f-b53b2a1d256c',
+    redirectUri: 'http://localhost:3000/',
+    scope: 'openid wallet email:optional',
+  })
 
 function MyApp() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
-  const {activateBrowserWallet} = useEthers()
+  var unse = window.localStorage.username
+  if (unse) {
+    var user = JSON.parse(unse)
+    var uns = user.value
+  }
+
+  const doLogin = async () => {
+    try {
+        const authorization = await uauth.loginWithPopup();
+
+        console.log(authorization);
+        window.location.reload()
+    } catch (error) {
+        console.error(error);
+    }
+  }
+
+  function logout() {
+    window.localStorage.removeItem('username')
+    window.location.reload()
+
+  }
+
 
   return (
     <Box
@@ -60,16 +90,32 @@ function MyApp() {
           </Container>
 
 
-            <Button sx={{
-              color: 'text.primary',
-              marginLeft: 0,
-              marginRight: 3,
 
-            }}
-            onClick={() => activateBrowserWallet()}
-            >
+              {uns 
+              ?
+              <Button sx={{
+                color: 'text.primary',
+                marginLeft: 0,
+                marginRight: 3,
+  
+              }}
+              onClick={() => logout()}
+              >
+                {uns}
+                </Button>
+              :
+                            <Button sx={{
+                              color: 'text.primary',
+                              marginLeft: 0,
+                              marginRight: 3,
+                
+                            }}
+                            onClick={() => doLogin()}
+                            >
             <AccountBalanceWalletIcon />
             </Button>
+}
+
           </Box>
 
 
