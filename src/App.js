@@ -21,7 +21,7 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 const uauth = new UAuth(
   {
     clientID: 'e2f8fed8-2ca7-46ff-831f-b53b2a1d256c',
-    redirectUri: 'http://localhost:3000/',
+    redirectUri: 'https://addressinsight.xyz/',
     scope: 'openid wallet email:optional',
   })
 
