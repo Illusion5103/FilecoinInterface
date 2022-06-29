@@ -20,7 +20,7 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 const uauth = new UAuth(
   {
-    clientID: 'e2f8fed8-2ca7-46ff-831f-b53b2a1d256c',
+    clientID: '5e4cda8a-7a9a-4633-aa61-7e0c4d04c13f',
     redirectUri: 'https://addressinsight.xyz/',
     scope: 'openid wallet email:optional',
   })
