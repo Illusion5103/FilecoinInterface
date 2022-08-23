@@ -22,9 +22,9 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 const uauth = new UAuth(
   {
-    clientID: '5e4cda8a-7a9a-4633-aa61-7e0c4d04c13f',
-    redirectUri: 'https://addressinsight.xyz/',
-    scope: 'openid wallet email:optional',
+    clientID: "9f11b584-eeb9-4af1-985c-da66ff6055db",
+    redirectUri: "https://filecoininterface.netlify.app/",
+    scope: "openid wallet"
   })
 
 function MyApp() {

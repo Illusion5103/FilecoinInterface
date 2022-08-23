@@ -1,5 +1,5 @@
 {
-  "name": "ethshanghai",
+  "name": "filecoininterface",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -50,3 +50,5 @@
     ]
   }
 }
+
+
