@@ -2,7 +2,7 @@
 
 [Live App](https://filecoininterface.netlify.app/)
 
-[Demo Video](https://youtube.com/netski/)
+[Demo Video](https://youtu.be/qGIFBDE094Q)
 
 ## Motivation
 FilecoinInterface is a simple interfacing DApp for the Filecoin network. The goal is to allow anybody to easily store, pay for long-term persistence, and retreive their data from IPFS using Filecoin as the payment layer. 
