@@ -15,6 +15,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import {useEthers} from "@usedapp/core";
 import UAuth from '@uauth/js';
+import PersonIcon from '@mui/icons-material/Person';
+import { Typography } from '@mui/material';
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -112,7 +114,7 @@ function MyApp() {
                             }}
                             onClick={() => doLogin()}
                             >
-            <AccountBalanceWalletIcon />
+              <PersonIcon/>
             </Button>
 }
 
@@ -131,17 +133,14 @@ function MyApp() {
         }}>
 
 
+
         <Main/>
         
         <Box sx={{
             position: 'absolute',
             bottom: 0,
           }}>
-            <a target="_blank" rel="noreferrer" href="https://twitter.com/addressinsight" style={{all: "unset"}}>
-                <TwitterIcon />
-                &nbsp;
-            </a>
-            <a target="_blank" rel="noreferrer" href="https://github.com/fraanetski/addressinsight" style={{all: "unset"}}>
+            <a target="_blank" rel="noreferrer" href="https://github.com/fraanetski/ipfsinterface" style={{all: "unset"}}>
                 <GitHubIcon />
             </a>
             <br/>
@@ -172,7 +171,7 @@ export default function ToggleColorMode() {
       createTheme({
         palette: {
           primary: {
-            main: '#aa3eff',
+            main: '#3275a8',
           },
           secondary: {
             main: '#ff2f00',
